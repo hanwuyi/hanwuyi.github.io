@@ -1,361 +1,106 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="殷无纣’S Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+  	<link rel="stylesheet" href="/css/style.css">
+  	<link rel="stylesheet" href="/css/github-gist.css">
+    <!--SEO-->
 
+<meta name="description" content="殷无纣，技术小白，生活分享"/>
 
 
-  
+<meta name="keywords" content="殷无纣，技术小白，生活分享"/>
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
 
 
+<title>MAC上操作搭建hexo+github page的博客 | 殷无纣’S Blog</title>
 
 
+    <link rel="alternate" href="/atom.xml" title="殷无纣’S Blog" type="application/atom+xml">
 
 
+    <link rel="icon" href="/favicon.ico">
 
+    
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1d283676d7e81d10054b06f70a90decf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="hexo,github," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="关于我博客的一些事情 大概从刚接触网络的时候就开始折腾博客了。2006年左右的时候就开始各种开博客，还记得最早开的是新浪博客，而且一下子就开了好几个。现在偶尔忆苦思甜的时候还会去那时候的博客看看，看看年少不知愁滋味的自己当时为赋新诗强说愁的矫情姿态。">
-<meta name="keywords" content="hexo,github">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MAC上操作搭建hexo+github page的博客">
-<meta property="og:url" content="http://yoursite.com/2017/12/21/githubhexo/index.html">
-<meta property="og:site_name" content="殷无纣’S Blog">
-<meta property="og:description" content="关于我博客的一些事情 大概从刚接触网络的时候就开始折腾博客了。2006年左右的时候就开始各种开博客，还记得最早开的是新浪博客，而且一下子就开了好几个。现在偶尔忆苦思甜的时候还会去那时候的博客看看，看看年少不知愁滋味的自己当时为赋新诗强说愁的矫情姿态。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/blog.png">
-<meta property="og:image" content="http://yoursite.com/images/github.png">
-<meta property="og:updated_time" content="2017-12-21T12:39:07.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MAC上操作搭建hexo+github page的博客">
-<meta name="twitter:description" content="关于我博客的一些事情 大概从刚接触网络的时候就开始折腾博客了。2006年左右的时候就开始各种开博客，还记得最早开的是新浪博客，而且一下子就开了好几个。现在偶尔忆苦思甜的时候还会去那时候的博客看看，看看年少不知愁滋味的自己当时为赋新诗强说愁的矫情姿态。">
-<meta name="twitter:image" content="http://yoursite.com/images/blog.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"remove","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2017/12/21/githubhexo/"/>
-
-
-
-
-
-  <title>MAC上操作搭建hexo+github page的博客 | 殷无纣’S Blog</title>
-  
-
-
-
-
-
-
-
-
+    
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">殷无纣’S Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <h1 class="site-subtitle" itemprop="description">寥寥数语，皆我心之所慨。</h1>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <body>
+    <div class="container">
+	<header class="header">
+	  <div class="blog-title">
+	    <a href="/"> <img src="/img/logo.png"></a>
+	  </div>
+	  <nav>
+	    <ul class="menu">
+	      
+	        <li class="menu-item">
+	          <a href="/" class="menu-item-link nav-underline">首页</a>
+	        </li>&sdot;
+	      
+	        <li class="menu-item">
+	          <a href="/archives" class="menu-item-link nav-underline">归档</a>
+	        </li>&sdot;
+	      
+	        <li class="menu-item">
+	          <a href="/links" class="menu-item-link nav-underline">友链</a>
+	        </li>&sdot;
+	      
+	      	<li class="menu-item">
+	          <a href="/about" class="menu-item-link nav-underline">关于</a>
+	        </li>
+	    </ul>
+	  </nav>
+	</header>
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+<hr />
+    <div class="container">	
+	<div class="archive-main">
+	    <div class="archive-title">
+	    	<h2>MAC上操作搭建hexo+github page的博客</h2>	    	
+	    </div>
+	    <div class="archive-meta">
+	   	    2017-12-21&nbsp;&nbsp;&sdot;&nbsp;&nbsp; 
+	   	    
+            	<a class="tag" href="/tags/#hexo"title="hexo">hexo</a>&nbsp;&nbsp;
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            	<a class="tag" href="/tags/#github"title="github">github</a>&nbsp;&nbsp;
             
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/githubhexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="殷无纣">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="殷无纣’S Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">MAC上操作搭建hexo+github page的博客</h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T11:10:00+08:00">
-                2017-12-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h4 id="关于我博客的一些事情"><a href="#关于我博客的一些事情" class="headerlink" title="关于我博客的一些事情"></a>关于我博客的一些事情</h4><hr>
+	    </div>
+		<hr class="one"/>
+		<div class="archive-content typo">
+			<h4 id="关于我博客的一些事情"><a href="#关于我博客的一些事情" class="headerlink" title="关于我博客的一些事情"></a>关于我博客的一些事情</h4><hr>
 <p>大概从刚接触网络的时候就开始折腾博客了。2006年左右的时候就开始各种开博客，还记得最早开的是新浪博客，而且一下子就开了好几个。现在偶尔忆苦思甜的时候还会去那时候的博客看看，看看年少不知愁滋味的自己当时为赋新诗强说愁的矫情姿态。<a id="more"></a><br>而后就开始接触到各种建站，也就顺手搭建了自己的博客。最早做独立博客的时候用的是pjblog，而后就是WordPress。当时也是年轻，没有定性的各种尝试新鲜，几乎测试了所有的博客程序，最终还是选择了WordPress，当时也只是分享一些建站技巧或经验什么的，现在想起来也觉得那时候也特别的有激情。不过09年的时候由于遭受了众所周知的原因，博客数据全部丢失，也是觉得特别遗憾。再后来出了维护几个要当做案例找工作的站点以外，就常驻QQ空间了，博客再也没有开过。<br>搭建这个hexo之前，我觉得好难。虽然一直是草根站长，但是对于技术方面我还没有真正静下来去研究各种语言或者技术，linux也是学的一知半解。很没有信心，所以也懒得去弄。<br>但是在我目前工作的这家单位里，由于工作关系我接触到了一个比我小几岁的同事，他身上一些的特点或者特质总会让我想起十几年前同样对建站充满激情的我。比如他会早上6点左右起床，下班之后在单位继续学习到9点以后再回家。突然想到刚毕业时我也是充满这样的工作和学习激情，不要当中年油腻，还是继续起来激情吧。于是开始学习python，然后有了这个博客。希望记录下自己的学习经历一些一些有的没的吧。</p>
 <p>基于那个小同事的困惑，所以写下这个全是干货的攻略，希望对他有所帮助。</p>
 <h4 id="关于环境配置"><a href="#关于环境配置" class="headerlink" title="关于环境配置"></a>关于环境配置</h4><hr>
@@ -406,326 +151,59 @@
 <p>这里有坑：注意坑四：网上许多都是说在Github上直接新建CNAME文件，如果这样的话，在你下一次执行hexo d部署命令后CNAME文件就消失了，因为本地没有此文件嘛。</p>
 </blockquote>
 <h6 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h6><p>如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录。<br>登录你注册域名的网站，比如万网，在你购买的域名后边点击：解析 –&gt; 添加解析<br>记录类型：CNAME<br>主机记录：将域名解析为example.com（不带www），填写@或者不填写<br>记录值：hanwuyi.github.io. (不要忘记最后的.，hanwuyi改为你自己的用户名)，点击保存即可。<br>此时，大功告成！</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div></div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="殷无纣 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/github/" rel="tag"># github</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/12/19/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/01/zaoqi/" rel="prev" title="早起">
-                早起 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA4OS8xMzYyNQ=="></div>
-    </div>
-
-  
-
-
-
-        </div>
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2006 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">殷无纣</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">
-
-
-
-
-Hosted by 
- <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
-
-
-
-
-
-主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
+ 
+		</div>
+		
+		    <div id="comments">
+		        
+	<!--PC和WAP自适应版-->
+<link rel="stylesheet" type="text/css" href="/css/changyan.css"/>
+<div id="SOHUCS"></div>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+	(function(){var appid='cytsbYV5p';var conf='prod_5db6bea920c9a0d149cedeab44860234';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("http://qn.apkfuns.com/changyan/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
 
+		    </div>
+		
+	</div>
+</div>
+<div id="toc">
+    <div class="archive-toc">
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#关于我博客的一些事情"><span class="toc-text">关于我博客的一些事情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关于环境配置"><span class="toc-text">关于环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Node-js"><span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关联Github"><span class="toc-text">关联Github</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#添加ssh-key到Github"><span class="toc-text">添加ssh key到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#检查SSH-keys是否存在Github"><span class="toc-text">检查SSH keys是否存在Github</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#生成新的ssh-key"><span class="toc-text">生成新的ssh key</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#将ssh-key添加到Github中"><span class="toc-text">将ssh key添加到Github中</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绑定个人域名"><span class="toc-text">绑定个人域名</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Github端"><span class="toc-text">Github端</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#域名解析"><span class="toc-text">域名解析</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
+		<hr />
+<div class="footer">
 	
-
-
-
-
-
-  
-
-
-
-
-
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
+        
+            <a href="//github.com/hanwuyi" rel="external nofollow" title="Github" target="_blank">
+		    	<i class="iconfont">&#xeee2;</i>
+		    </a>&nbsp;&nbsp;
+        
+            <a href="mailto:#" rel="external nofollow" title="邮箱" target="_blank">
+		    	<i class="iconfont">&#xe69f;</i>
+		    </a>&nbsp;&nbsp;
+        
+            <a href="" rel="external nofollow" title="微信" target="_blank">
+		    	<i class="iconfont">&#xe7e5;</i>
+		    </a>&nbsp;&nbsp;
+        
+            <a href="" rel="external nofollow" title="微博" target="_blank">
+		    	<i class="iconfont">&#xe629;</i>
+		    </a>&nbsp;&nbsp;
+        
+            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+		    	<i class="iconfont">&#xe6ee;</i>
+		    </a>&nbsp;&nbsp;
+        
+	
+</div>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+		<div class="copyright">
+	Copyright &copy; 2018 . <br />Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>&nbsp;&nbsp;&sdot;&nbsp;&nbsp;Theme is <a href="https://github.com/praming/hexo-theme-Ice" target="_blank">Ice</a>&nbsp;&nbsp;&sdot;&nbsp;&nbsp;Hosted by <a href="https://pages.coding.me">Coding Pages</a>
+</div>
+  </body>
 </html>
